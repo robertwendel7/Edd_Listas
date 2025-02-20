@@ -1,4 +1,4 @@
-export class Node{
+class Node{
     constructor(element, next = null){
         this.element = element
         this.next = next
@@ -11,7 +11,7 @@ export class Node{
     }
 }
 
-export class ListaLincada{
+class ListaLincada{
     constructor(){
         this.head = null
         this._size = 0
@@ -19,7 +19,7 @@ export class ListaLincada{
 
     append(element){
         const no = new Node(element)
-        if(this._size() === 0){
+        if(this.size() === 0){
             this.head = no
         }else{
             let atual = this.head
@@ -100,7 +100,7 @@ export class ListaLincada{
         if(this.size() == 0){
             return "Lista vazia"
         }
-        return this.head.toStrign()
+        return this.head.toString()
 
     }
 
@@ -119,4 +119,11 @@ export class ListaLincada{
 
 
 
+}
+const lista = new ListaLincada()
+
+function clickAdicionar(){
+    let element = document.getElementById("input").value
+    lista.append(element)
+    console.log(lista.toString())
 }
