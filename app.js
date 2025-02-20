@@ -1,46 +1,46 @@
-let items = []
+// let items = []
 
-function append(element){
-    items.push(element)
-}
-function insert(position, element){
-    // items.splice(position, 0, element)
-    if(position > items.lenght || position < 0){
-        return 
-    }
+// function append(element){
+//     items.push(element)
+// }
+// function insert(position, element){
+//     // items.splice(position, 0, element)
+//     if(position > items.lenght || position < 0){
+//         return 
+//     }
     
-    // realocar do fim ao 'position' os elementos
-    for(let i = items.length - 1; i >= position; i--){
-        items[i+1] = items[i]
-    }
+//     // realocar do fim ao 'position' os elementos
+//     for(let i = items.length - 1; i >= position; i--){
+//         items[i+1] = items[i]
+//     }
 
-    // alocar o 'element' na 'position'
-    items[position] = element
-}
-function remove(element){
+//     // alocar o 'element' na 'position'
+//     items[position] = element
+// }
+// function remove(element){
 
-}
-function removeAt(position){
+// }
+// function removeAt(position){
 
-}
-function indexOt(element){
+// }
+// function indexOt(element){
 
-}
-function size(){
+// }
+// function size(){
 
-}
-function toString(){
+// }
+// function toString(){
 
-}
-function isEmpty(){
+// }
+// function isEmpty(){
 
-}
-function print(){
+// }
+// function print(){
 
-}
-function clear(){
+// }
+// function clear(){
 
-}
-function search(element){
+// }
+// function search(element){
 
-}
+// }
