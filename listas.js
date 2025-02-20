@@ -60,9 +60,9 @@ class ListaLincada{
         this.removeAt(pos)
     }
 
-    removeAt(position){
-        if(position >= this._size()){
-            console.log(`Posição inválida. Escolha o intervalo de 0 até ${this._size() - 1}`)
+    removeAt(posicao){
+        if(posicao >= this.size()){
+            console.log(`Posição inválida. Escolha o intervalo de 0 até ${this.size() - 1}`)
             return
         } 
 
@@ -126,4 +126,37 @@ function clickAdicionar(){
     let element = document.getElementById("input").value
     lista.append(element)
     console.log(lista.toString())
+}
+
+function clickRemove(){
+    let element = document.getElementById("input").value
+    lista.remove(element)
+    console.log(lista.toString())
+}
+
+function clickRemoveAt(){
+    let posicao = document.getElementById("input").value
+    lista.removeAt(posicao)
+    console.log(lista.removeAt())
+}
+
+function clickIndexOf(){
+    let element = document.getElementById("input").value
+    lista.indexOf(element)
+    console.log(lista.indexOf())
+}
+
+function clickToString(){
+    lista.toString()
+    console.log(lista.toString())
+}
+
+function clickSize(){
+    // lista.size()
+    console.log(lista.size())
+}
+
+function clickClear(){
+    // lista.clear()
+    console.log(lista.clear())
 }
