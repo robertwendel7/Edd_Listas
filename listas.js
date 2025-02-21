@@ -37,13 +37,13 @@ class ListaLincada{
             n.next = this.head
             this.head = no
             this._size++
-        }else if(posicao > 0 && posicao <=this._size()){
+        }else if(posicao > 0 && posicao <=this.size()){
             let pos = 0
             let atual = this.head
             let previos = null
             while(pos< posicao){
                 previos = atual
-                current = current.next
+                atual = atual.next
                 pos++ 
             }
 
@@ -57,7 +57,9 @@ class ListaLincada{
 
     remove(element){
         const pos = this.indexOf(element)
-        this.removeAt(pos)
+        if (pos >= 0) {
+            this.removeAt(pos)
+        }
     }
 
     removeAt(posicao){
@@ -122,32 +124,48 @@ class ListaLincada{
 }
 const lista = new ListaLincada()
 
+function mostrarValor(){
+    document.querySelector("#resultado").innerHTML = lista.toString()
+}
 function clickAdicionar(){
-    let element = document.getElementById("input").value
+    let element = document.getElementById("inputAdicionar").value
     lista.append(element)
+    mostrarValor()
+    console.log(lista.toString())
+}
+
+function clickInsert(){
+    let element = document.getElementById("inputInsertPos").value
+    let posicao = document.getElementById("inputInsertElm").value
+
+    lista.insert(posicao, element)
+    mostrarValor()
     console.log(lista.toString())
 }
 
 function clickRemove(){
-    let element = document.getElementById("input").value
+    let element = document.getElementById("inputRemove").value
     lista.remove(element)
-    console.log(lista.toString())
+    mostrarValor()
+    console.log(element)
 }
 
 function clickRemoveAt(){
-    let posicao = document.getElementById("input").value
+    let posicao = document.getElementById("inputRemoveAt").value
     lista.removeAt(posicao)
-    console.log(lista.removeAt())
+    mostrarValor()
+    lista.toString()
 }
 
 function clickIndexOf(){
-    let element = document.getElementById("input").value
+    let element = document.getElementById("inputIndexOf").value
     lista.indexOf(element)
     console.log(lista.indexOf())
 }
 
 function clickToString(){
     lista.toString()
+    mostrarValor()
     console.log(lista.toString())
 }
 
@@ -157,6 +175,6 @@ function clickSize(){
 }
 
 function clickClear(){
-    // lista.clear()
-    console.log(lista.clear())
+    lista.clear()
+    // console.log(lista.clear())
 }

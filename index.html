@@ -4,47 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- <link rel="stylesheet" href="../css/style.css"> -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="central">
     
-        <label>Digite algo:</label>
-        <input type="text" required id="input">
+        
+        <div class="container">
 
         <br>
-        <label>Escolha o método:</label>
+        <h1>Lista telefônica:</h1>
         <br>
-
+        <label>Adicionar telefone na lista de contatos</label>
+        <input type="text" placeholder="Digite o número..." required id="inputAdicionar">
         <button onClick="clickAdicionar()">Append</button>
         <br>
+        <label>Adicionar o telefone em uma determinada posição na lista de contatos</label>
+        <input type="text" placeholder="Digite a posição.." required id="inputInsertPos">
+        <input type="text" placeholder="Digite o número..." required id="inputInsertElm">
+        <button onClick="clickInsert()">Insert</button>
+        <br>
+        <label>Remover telefone da lista de contatos</label>
+        <input type="text" placeholder="Digite o número..." required id="inputRemove">
         <button onClick="clickRemove()">Remove</button>
         <br>
+        <label>Remover telefone apartir de uma posição na lista de contatos</label>
+        <input type="text" placeholder="Digite a posição.." required id="inputRemoveAt">
         <button onClick="clickRemoveAt()">RemoveAt</button>
         <br>
+        <label>Descobrir a posição do telefone na lista de contatos</label>
+        <input type="text" placeholder="Digite o número..." required id="inputIndexOf">
         <button onClick="clickIndexOf()">indexOf</button>
         <br>
+        
         <button onClick="clickToString()" >toStrig</button>
         <br>
+        
         <button onClick="clickSize()" >size</button>
         <br>
+        
         <button onClick="clickClear()" >clear</button>
 
-        <!-- <div>
+    </div>
+
+        
+
+        <div>
             <p id="resultado"></p>
         </div>
 
-        <div>
-            <p id="resultadoSize"></p>
-        </div>
-
-        <div>
-            <p id="resultadoPeek"></p>
-        </div>
-
-        <div>
-            <p id="resultadoIsEmpty"></p>
-        </div> -->
+    
 
         <script src="listas.js"></script>
 
